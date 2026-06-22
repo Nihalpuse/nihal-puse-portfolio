@@ -8,22 +8,26 @@ import { Experience } from "@/components/Experience";
 import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ScrollThread } from "@/components/ScrollThread";
 
 export default function Home() {
   return (
-    <>
-      <SkipLink />
-      <Nav />
-      <main id="main">
-        <Hero />
-        <About />
-        <TechStack />
-        <SelectedWork />
-        <Experience />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <div className="relative">
+      <ScrollThread />
+      <div className="relative z-10">
+        <SkipLink />
+        <Nav />
+        <main id="main">
+          <Hero />
+          <About />
+          <TechStack />
+          <SelectedWork />
+          <Experience />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </div>
   );
 }

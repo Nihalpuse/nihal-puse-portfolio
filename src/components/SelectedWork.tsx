@@ -1,17 +1,21 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects, githubUrl } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { CompactProjectCard } from "@/components/CompactProjectCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function SelectedWork() {
   const featured = projects.filter((p) => p.featured);
+  const more = projects.filter((p) => !p.featured);
+
   return (
     <section id="work" aria-labelledby="work-heading" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-20">
         <Reveal>
           <SectionHeading id="work-heading" label="Selected work" title="Selected work" />
         </Reveal>
+
         <div className="space-y-8">
           {featured.map((project, i) => (
             <Reveal key={project.slug}>
@@ -19,7 +23,25 @@ export function SelectedWork() {
             </Reveal>
           ))}
         </div>
-        <div className="mt-10">
+
+        {more.length > 0 && (
+          <div className="mt-16">
+            <Reveal>
+              <h3 className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-accent-2">
+                More projects
+              </h3>
+            </Reveal>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {more.map((project, i) => (
+                <Reveal key={project.slug} delay={i * 0.05}>
+                  <CompactProjectCard project={project} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-12">
           <a
             href={githubUrl}
             target="_blank"

@@ -30,4 +30,37 @@ export const projects: Project[] = [
     // image: "/projects/procurement.png", // add a screenshot at this path, then uncomment
     featured: true,
   },
+  {
+    slug: "docfliq",
+    title: "Docfliq",
+    blurb:
+      "Responsive UI for a professional network and learning platform for verified healthcare professionals — combining a social content feed, course catalog, and live webinar events. Built reusable feed, course, and event-registration components from Figma and wired them to REST APIs for content, verification, and enrollment.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    links: { note: "Private — walkthrough on request" },
+    status: "private",
+    featured: false,
+    company: "Scalixity",
+  },
+  {
+    slug: "nakshatra-gyaan",
+    title: "Nakshatra Gyaan",
+    blurb:
+      "Storefront UI for an astrology e-commerce platform — product listings, cart, and checkout — plus a real-time AI chat interface with streaming responses and message-state management. Integrated product and payment APIs and handled loading, error, and empty states across the shopping experience.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    links: { note: "Private — walkthrough on request" },
+    status: "private",
+    featured: false,
+    company: "Scalixity",
+  },
+  {
+    slug: "smarttenant-ai",
+    title: "SmartTenantAI",
+    blurb:
+      "Role-based property-management UI serving two user types — property managers and rental seekers — with distinct dashboards and workflows. Built listings, search, and maintenance-request features as responsive, reusable components, with AI-powered features over REST APIs.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    links: { note: "Private — walkthrough on request" },
+    status: "private",
+    featured: false,
+    company: "Scalixity",
+  },
 ];

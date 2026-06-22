@@ -15,6 +15,7 @@ export interface Project {
   status: ProjectStatus;
   image?: string;
   featured: boolean;
+  company?: string;
 }
 
 export interface ExperienceItem {

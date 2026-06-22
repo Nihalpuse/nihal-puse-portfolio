@@ -29,6 +29,14 @@ describe("content data", () => {
     expect(githubUrl).toBe("https://github.com/Nihalpuse");
   });
 
+  it("private projects expose no live or code link", () => {
+    for (const p of projects.filter((p) => p.status === "private")) {
+      expect(p.links.live).toBeUndefined();
+      expect(p.links.code).toBeUndefined();
+      expect(p.links.note).toBeTruthy();
+    }
+  });
+
   it("never exposes a phone number in site content", () => {
     const blob = JSON.stringify({ site, projects, experience, education, skills });
     expect(blob).not.toMatch(/9425675862/);

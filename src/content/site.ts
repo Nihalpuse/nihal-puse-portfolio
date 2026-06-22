@@ -1,4 +1,6 @@
-export const site = {
+import type { SiteContent } from "@/lib/types";
+
+export const site: SiteContent = {
   name: "Nihal Puse",
   role: "Frontend Developer",
   location: "Bhopal, India",
@@ -31,4 +33,4 @@ export const site = {
     { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
   ],
-} as const;
+};

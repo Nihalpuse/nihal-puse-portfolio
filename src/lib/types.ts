@@ -42,3 +42,19 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+export interface SiteContent {
+  name: string;
+  role: string;
+  location: string;
+  email: string;
+  eyebrow: string;
+  tagline: string;
+  available: boolean;
+  availabilityText: string;
+  resumeHref: string;
+  about: string[];
+  principles: string[];
+  socials: { github: string; linkedin: string; email: string };
+  nav: NavLink[];
+}

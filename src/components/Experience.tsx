@@ -9,10 +9,10 @@ export function Experience() {
         <Reveal>
           <SectionHeading id="experience-heading" label="Experience" title="Experience" />
         </Reveal>
-        <ol className="relative ml-3 border-l border-border-strong">
+        <ol className="relative ml-3 space-y-12 border-l border-border-strong">
           {experience.map((item, i) => (
             <Reveal key={`${item.company}-${item.period}`} delay={i * 0.05}>
-              <li className="relative ml-6 pb-16 last:pb-0">
+              <li className="relative ml-6">
                 <span
                   className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent-2 ring-4 ring-bg"
                   aria-hidden

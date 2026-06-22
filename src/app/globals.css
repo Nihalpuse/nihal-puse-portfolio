@@ -23,6 +23,13 @@
   }
   body {
     background-color: var(--color-bg);
+    /* Ambient color washes so the glass surfaces have something to frost. */
+    background-image:
+      radial-gradient(48rem 32rem at 12% -6%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 60%),
+      radial-gradient(46rem 34rem at 88% 8%, color-mix(in srgb, var(--color-accent-2) 18%, transparent), transparent 62%),
+      radial-gradient(48rem 34rem at 50% 108%, color-mix(in srgb, var(--color-accent-2) 12%, transparent), transparent 60%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--color-text);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -39,4 +46,12 @@
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Frosted-glass panel: translucent fill, blur, and a hairline light edge. */
+@utility glass {
+  background-color: color-mix(in srgb, var(--color-surface) 45%, transparent);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }

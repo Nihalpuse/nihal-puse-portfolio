@@ -26,7 +26,7 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="grid h-11 w-11 place-items-center rounded-lg border border-border-strong bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+              className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-white/5 text-muted backdrop-blur-md transition-colors hover:border-accent/60 hover:bg-white/[0.08] hover:text-accent"
             >
               <LinkedinIcon size={18} />
             </a>
@@ -35,14 +35,14 @@ export function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="grid h-11 w-11 place-items-center rounded-lg border border-border-strong bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+              className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-white/5 text-muted backdrop-blur-md transition-colors hover:border-accent/60 hover:bg-white/[0.08] hover:text-accent"
             >
               <GithubIcon size={18} />
             </a>
             <a
               href={site.socials.email}
               aria-label="Email"
-              className="grid h-11 w-11 place-items-center rounded-lg border border-border-strong bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+              className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-white/5 text-muted backdrop-blur-md transition-colors hover:border-accent/60 hover:bg-white/[0.08] hover:text-accent"
             >
               <Mail size={18} />
             </a>

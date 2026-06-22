@@ -12,7 +12,7 @@ export function Education() {
         <div className="grid gap-4 sm:grid-cols-2">
           {education.map((item, i) => (
             <Reveal key={item.degree} delay={i * 0.05}>
-              <div className="h-full rounded-xl border border-border-strong bg-surface-2 p-6">
+              <div className="glass h-full rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-semibold">{item.degree}</h3>
                   <span className="shrink-0 font-mono text-xs text-subtle">{item.period}</span>

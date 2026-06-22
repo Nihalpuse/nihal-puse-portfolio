@@ -29,12 +29,12 @@ export function Hero() {
           </a>
           <a
             href={site.resumeHref}
-            className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition-colors hover:border-accent hover:text-accent"
           >
             <Download size={16} /> Download résumé
           </a>
           {site.available && (
-            <span className="inline-flex items-center gap-2 rounded-lg border border-accent/40 px-4 py-2.5 text-sm text-accent">
+            <span className="inline-flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/5 px-4 py-2.5 text-sm text-accent backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-accent" aria-hidden /> {site.availabilityText}
             </span>
           )}

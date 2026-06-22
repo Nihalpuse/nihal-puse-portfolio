@@ -12,7 +12,7 @@ export function Nav() {
   const active = useActiveSection(SECTION_IDS);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-bg/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-bg/40 backdrop-blur-xl backdrop-saturate-150">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4" aria-label="Primary">
         <a href="#" className="font-mono text-sm font-bold text-accent">~/nihal</a>
 
@@ -50,7 +50,7 @@ export function Nav() {
       </nav>
 
       {open && (
-        <div className="border-t border-border px-6 py-4 md:hidden">
+        <div className="border-t border-white/10 px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {site.nav.map((link) => (
               <a key={link.href} href={link.href} className="text-muted" onClick={() => setOpen(false)}>

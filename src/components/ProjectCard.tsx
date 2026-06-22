@@ -7,8 +7,8 @@ import { Chip } from "@/components/ui/Chip";
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const reversed = index % 2 === 1;
   return (
-    <article className="overflow-hidden rounded-2xl border border-border-strong bg-surface-2 md:grid md:grid-cols-2">
-      <div className={`relative aspect-[16/10] bg-surface ${reversed ? "md:order-2" : ""}`}>
+    <article className="glass overflow-hidden rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.25)] md:grid md:grid-cols-2">
+      <div className={`relative aspect-[16/10] bg-white/[0.02] ${reversed ? "md:order-2" : ""}`}>
         {project.image ? (
           <Image
             src={project.image}

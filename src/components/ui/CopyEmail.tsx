@@ -21,7 +21,7 @@ export function CopyEmail({ email }: { email: string }) {
       type="button"
       onClick={copy}
       aria-label="Copy email address"
-      className="group inline-flex items-center gap-2 rounded-lg border border-border-strong bg-surface px-4 py-2.5 font-mono text-sm transition-colors hover:border-accent hover:text-accent"
+      className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm backdrop-blur-md transition-colors hover:border-accent/60 hover:bg-white/[0.08] hover:text-accent"
     >
       <span>{email}</span>
       {copied ? (

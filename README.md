@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nihal Puse — Portfolio
 
-## Getting Started
+Personal portfolio for **Nihal Puse**, a frontend developer based in Bhopal, India.
+Single-page site in an "Engineered Dark" theme, built with the stack it showcases.
 
-First, run the development server:
+🔗 **Live:** _add your Vercel URL here_
+
+## Tech stack
+
+- **Next.js** (App Router) + **TypeScript**
+- **Tailwind CSS v4** (CSS-first `@theme` tokens)
+- **Framer Motion** (scroll reveals, reduced-motion aware)
+- Code-generated Open Graph image via `next/og`
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000 (Turbopack)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build    # production build (webpack — see note below)
+npm run start    # serve the production build
+npm test         # Vitest
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> **Build note:** `npm run build` uses `next build --webpack`. `next/og` (the
+> generated OG image) crashes a Turbopack build worker on Windows, so the build
+> runs on webpack; `npm run dev` stays on Turbopack for speed.
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+All content lives as typed data in [`src/content/`](src/content/) — edit those
+files, no JSX changes needed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `site.ts` — name, role, tagline, about, links, nav
+- `projects.ts` — featured projects (uncomment `image:` after adding a screenshot to `public/projects/`)
+- `experience.ts` · `education.ts` · `skills.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The résumé download is served from `public/resume.pdf`.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hosted on **Vercel**. Pushing to `main` triggers an automatic deployment.

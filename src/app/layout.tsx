@@ -19,13 +19,11 @@ export const metadata: Metadata = {
       "Frontend developer building fast, accessible web interfaces with React, Next.js & TypeScript.",
     url: "/",
     siteName: "Nihal Puse",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Nihal Puse — Frontend Developer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nihal Puse — Frontend Developer",
     description: "Frontend developer building fast, accessible web interfaces.",
-    images: ["/og.png"],
   },
 };
 

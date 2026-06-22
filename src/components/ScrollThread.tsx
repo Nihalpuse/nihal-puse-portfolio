@@ -2,21 +2,29 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Builds a sharp zig-zag path (in px coordinates) spanning the given box,
-// oscillating left/right of center as it descends.
-function buildZigZag(w: number, h: number): string {
-  if (w <= 0 || h <= 0) return "";
+// Builds a smooth serpentine (curvy) path in px coordinates, descending from
+// startY to the bottom and oscillating left/right of center. Each segment uses
+// vertical-tangent cubic handles so the wave flows like a sine curve rather
+// than sharp corners. Ends settled back at center.
+function buildWave(w: number, h: number, startY: number): string {
+  if (w <= 0 || h <= 0 || startY >= h) return "";
   const cx = w / 2;
-  const amp = Math.min(w * 0.34, 280);
-  const segLen = 360; // vertical distance per zig
-  const n = Math.max(3, Math.round(h / segLen));
-  let d = `M ${cx.toFixed(1)} 0`;
-  for (let i = 1; i < n; i++) {
-    const y = (h / n) * i;
-    const x = cx + (i % 2 === 1 ? amp : -amp);
-    d += ` L ${x.toFixed(1)} ${y.toFixed(1)}`;
+  const amp = Math.min(w * 0.3, 240);
+  const usable = h - startY;
+  const n = Math.max(2, Math.round(usable / 300)); // ~300px per half-wave
+  const step = usable / n;
+  let prevX = cx;
+  let prevY = startY;
+  let d = `M ${cx.toFixed(1)} ${startY.toFixed(1)}`;
+  for (let i = 1; i <= n; i++) {
+    const y = startY + step * i;
+    const x = i === n ? cx : cx + (i % 2 === 1 ? amp : -amp);
+    const dy = (y - prevY) / 2;
+    d += ` C ${prevX.toFixed(1)} ${(prevY + dy).toFixed(1)} ${x.toFixed(1)} ${(y - dy).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`;
+    prevX = x;
+    prevY = y;
   }
-  return d + ` L ${cx.toFixed(1)} ${h.toFixed(1)}`;
+  return d;
 }
 
 // A zig-zag line woven down the whole page that "draws" itself as you scroll,
@@ -38,7 +46,13 @@ export function ScrollThread() {
     reducedRef.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const measure = () => {
       const el = wrapRef.current;
-      if (el) setD(buildZigZag(el.offsetWidth, el.offsetHeight));
+      if (!el) return;
+      // Start the thread just below the hero (top of the About section).
+      const about = document.getElementById("about");
+      const startY = about
+        ? Math.max(0, about.getBoundingClientRect().top - el.getBoundingClientRect().top)
+        : 0;
+      setD(buildWave(el.offsetWidth, el.offsetHeight, startY));
     };
     measure();
     const ro = new ResizeObserver(measure);

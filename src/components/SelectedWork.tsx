@@ -27,9 +27,17 @@ export function SelectedWork() {
         {more.length > 0 && (
           <div className="mt-16">
             <Reveal>
-              <h3 className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-accent-2">
+              <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-accent-2">
                 More projects
               </h3>
+            </Reveal>
+            <Reveal>
+              <p className="mb-8 max-w-3xl text-sm leading-relaxed text-muted">
+                Contributed frontend development to multiple production platforms at Scalixity,
+                including Docfliq (medical-professional network with courses &amp; live webinars),
+                Nakshatra Gyaan (astrology platform with e-commerce &amp; AI chat), and
+                SmartTenantAI (role-based property-management app).
+              </p>
             </Reveal>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {more.map((project, i) => (

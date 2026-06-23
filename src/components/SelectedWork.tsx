@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects, githubUrl } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { CompactProjectCard } from "@/components/CompactProjectCard";
+import { ProjectRow } from "@/components/ProjectRow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -41,13 +41,9 @@ export function SelectedWork() {
               </p>
             </Reveal>
             <Reveal>
-              <div className="grid gap-5 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
-                {more.map((project, i) => (
-                  <CompactProjectCard
-                    key={project.slug}
-                    project={project}
-                    className={i % 3 === 0 ? "lg:col-span-2" : ""}
-                  />
+              <div className="glass divide-y divide-white/10 overflow-hidden rounded-2xl">
+                {more.map((project) => (
+                  <ProjectRow key={project.slug} project={project} />
                 ))}
               </div>
             </Reveal>

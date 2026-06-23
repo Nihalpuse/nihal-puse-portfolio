@@ -80,7 +80,16 @@ export function ScrollThread() {
       // Track the point on the curve currently at the vertical center of the
       // viewport. The path's Y increases monotonically with length, so binary
       // search the length whose point sits at that document Y.
-      const targetY = window.scrollY + window.innerHeight / 2;
+      const vh = window.innerHeight;
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - vh);
+      const scrolled = Math.min(Math.max(window.scrollY, 0), maxScroll);
+      let targetY = scrolled + vh / 2;
+      // In the final half-viewport, advance the target down to the line's end so
+      // the dot finishes at the center-bottom point instead of stopping short.
+      const remaining = maxScroll - scrolled;
+      if (remaining < vh / 2) {
+        targetY += (vh / 2) * (1 - remaining / (vh / 2));
+      }
       let lo = 0;
       let hi = len;
       for (let i = 0; i < 18; i++) {

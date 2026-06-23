@@ -18,10 +18,23 @@ export function ProjectCard({ project }: { project: Project }) {
               <span className="h-3 w-3 rounded-full bg-white/15" />
               <span className="h-3 w-3 rounded-full bg-white/15" />
             </div>
-            <div className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-subtle">
-              <Lock size={10} className="shrink-0" />
-              <span className="truncate">{host ?? "private workspace"}</span>
-            </div>
+            {project.links.live ? (
+              <a
+                href={project.links.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${host} in a new tab`}
+                className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-subtle transition-colors hover:border-accent/50 hover:text-accent"
+              >
+                <Lock size={10} className="shrink-0" />
+                <span className="truncate">{host}</span>
+              </a>
+            ) : (
+              <div className="flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-subtle">
+                <Lock size={10} className="shrink-0" />
+                <span className="truncate">private workspace</span>
+              </div>
+            )}
           </div>
 
           {/* Screenshot */}

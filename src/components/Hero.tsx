@@ -25,7 +25,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px)",
+            "linear-gradient(var(--color-accent-2) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent-2) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />

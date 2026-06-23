@@ -103,15 +103,15 @@ export function ScrollThread() {
       <svg width="100%" height="100%" fill="none" style={{ display: "block" }}>
         <defs>
           <linearGradient id="thread-grad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#2dd4bf" />
-            <stop offset="100%" stopColor="#6366f1" />
+            <stop offset="0%" style={{ stopColor: "var(--color-accent)" }} />
+            <stop offset="100%" style={{ stopColor: "var(--color-accent-2)" }} />
           </linearGradient>
         </defs>
 
         {d && (
           <>
             {/* faint full track */}
-            <path d={d} stroke="#1b2330" strokeWidth={2} />
+            <path d={d} strokeWidth={2} style={{ stroke: "var(--color-border)" }} />
             {/* soft glow under the drawn portion */}
             <path
               d={d}
@@ -136,8 +136,8 @@ export function ScrollThread() {
             {/* tracking head */}
             {dot && !reducedRef.current && (
               <>
-                <circle cx={dot.x} cy={dot.y} r={9} fill="#2dd4bf" opacity={0.18} />
-                <circle cx={dot.x} cy={dot.y} r={3.5} fill="#2dd4bf" />
+                <circle cx={dot.x} cy={dot.y} r={9} opacity={0.18} style={{ fill: "var(--color-accent)" }} />
+                <circle cx={dot.x} cy={dot.y} r={3.5} style={{ fill: "var(--color-accent)" }} />
               </>
             )}
           </>

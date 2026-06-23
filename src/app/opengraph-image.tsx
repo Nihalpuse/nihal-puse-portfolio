@@ -2,6 +2,8 @@ import { ImageResponse } from "next/og";
 
 // Code-generated Open Graph image (link-preview card). Rendered at build time
 // from this component, so no static PNG is needed and it stays in sync.
+// NOTE: colors are literal hex (not the CSS tokens) because next/og renders via
+// Satori, which cannot read CSS variables. Keep these in sync with globals.css.
 export const alt = "Nihal Puse — Frontend Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

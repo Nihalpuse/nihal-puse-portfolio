@@ -46,7 +46,7 @@ export function Nav() {
           })}
           <a
             href={site.resumeHref}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-bg transition-all duration-200 ease-out hover:opacity-90 hover:shadow-[0_8px_24px_-6px_rgba(45,212,191,0.5)] active:scale-95"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-bg transition-all duration-200 ease-out hover:opacity-90 hover:shadow-[0_8px_24px_-6px_rgba(45,212,191,0.5)] hover:scale-[1.03] active:scale-95"
           >
             <Download size={15} /> Résumé
           </a>

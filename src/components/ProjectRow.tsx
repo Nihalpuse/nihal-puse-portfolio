@@ -11,7 +11,7 @@ export function ProjectRow({ project }: { project: Project }) {
     <>
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-2.5">
-          <h4 className="font-semibold">{project.title}</h4>
+          <h4 className="font-semibold transition-colors duration-200 group-hover:text-accent">{project.title}</h4>
           {project.company && <span className="font-mono text-xs text-subtle">· {project.company}</span>}
           {project.status === "private" && <Lock size={12} className="text-subtle" aria-hidden />}
         </div>
@@ -37,7 +37,7 @@ export function ProjectRow({ project }: { project: Project }) {
   );
 
   const className =
-    "group flex flex-col gap-3 px-5 py-5 transition-colors hover:bg-white/[0.03] sm:flex-row sm:items-center sm:justify-between sm:gap-6";
+    "group flex flex-col gap-3 px-5 py-5 transition-colors duration-200 hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between sm:gap-6";
 
   return href ? (
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>

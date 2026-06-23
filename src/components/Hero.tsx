@@ -43,13 +43,13 @@ export function Hero() {
         <motion.div className="mt-8 flex flex-wrap items-center gap-3" {...itemProps}>
           <a
             href="#work"
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-all duration-200 ease-out hover:opacity-90 hover:shadow-[0_8px_24px_-6px_rgba(45,212,191,0.5)] active:scale-[0.97]"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-all duration-200 ease-out hover:opacity-90 hover:shadow-[0_8px_24px_-6px_rgba(45,212,191,0.5)] hover:scale-[1.03] active:scale-[0.97]"
           >
             View work <ArrowRight size={16} />
           </a>
           <a
             href={site.resumeHref}
-            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition-all duration-200 ease-out hover:border-accent hover:text-accent active:scale-[0.97]"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition-all duration-200 ease-out hover:border-accent hover:text-accent hover:scale-[1.03] active:scale-[0.97]"
           >
             <Download size={16} /> Download résumé
           </a>

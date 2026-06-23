@@ -1,16 +1,13 @@
 import { skills } from "@/content/skills";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Chip } from "@/components/ui/Chip";
-import { Reveal } from "@/components/ui/Reveal";
 import { StaggerContainer, StaggerItem } from "@/components/ui/Stagger";
 
 export function TechStack() {
   return (
     <section aria-labelledby="tech-heading" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <Reveal>
-          <SectionHeading id="tech-heading" label="Tech I work with" title="Tech stack" />
-        </Reveal>
+        <SectionHeading id="tech-heading" label="Tech I work with" title="Tech stack" />
         <div className="space-y-6">
           {skills.map((group) => (
             <div key={group.label} className="flex flex-col gap-3 sm:flex-row sm:items-center">

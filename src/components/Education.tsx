@@ -6,9 +6,7 @@ export function Education() {
   return (
     <section aria-labelledby="education-heading" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <Reveal>
-          <SectionHeading id="education-heading" label="Education" title="Education" />
-        </Reveal>
+        <SectionHeading id="education-heading" label="Education" title="Education" />
         <div className="grid gap-4 sm:grid-cols-2">
           {education.map((item, i) => (
             <Reveal key={item.degree} delay={i * 0.05}>

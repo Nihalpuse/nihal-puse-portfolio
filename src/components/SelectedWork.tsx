@@ -13,9 +13,7 @@ export function SelectedWork() {
   return (
     <section id="work" aria-labelledby="work-heading" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <Reveal>
-          <SectionHeading id="work-heading" label="Selected work" title="Selected work" />
-        </Reveal>
+        <SectionHeading id="work-heading" label="Selected work" title="Selected work" />
 
         <div className="space-y-8">
           {featured.map((project) => (

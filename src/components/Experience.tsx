@@ -6,9 +6,7 @@ export function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-heading" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-20">
-        <Reveal>
-          <SectionHeading id="experience-heading" label="Experience" title="Experience" />
-        </Reveal>
+        <SectionHeading id="experience-heading" label="Experience" title="Experience" />
         <ol className="relative ml-3 space-y-12 border-l border-border-strong">
           {experience.map((item, i) => (
             <Reveal key={`${item.company}-${item.period}`} delay={i * 0.05}>

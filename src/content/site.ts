@@ -12,7 +12,7 @@ export const site: SiteContent = {
   availabilityText: "Open to frontend opportunities",
   resumeHref: "/resume.pdf",
   about: [
-    "Frontend developer based in Bhopal, currently building product UI at Scalixity. I turn designs into fast, accessible interfaces — mostly in the React, Next.js and TypeScript world, backed by Python and Flask when a project needs the full stack.",
+    "Frontend developer based in Bhopal, currently building product UI at Scalixity. I turn designs into fast, accessible interfaces — mostly in the React, Next.js and TypeScript world.",
     "I design the component API before the pixels, treat performance and accessibility as features rather than afterthoughts, and like to own a feature end to end — from the layout to the API behind it.",
   ],
   principles: [

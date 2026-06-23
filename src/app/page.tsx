@@ -9,6 +9,7 @@ import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ScrollThread } from "@/components/ScrollThread";
+import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         </main>
         <Footer />
       </div>
+      <BackToTop />
     </div>
   );
 }

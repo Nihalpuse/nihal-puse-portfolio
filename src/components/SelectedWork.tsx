@@ -4,6 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectRow } from "@/components/ProjectRow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { StaggerContainer, StaggerItem } from "@/components/ui/Stagger";
 
 export function SelectedWork() {
   const featured = projects.filter((p) => p.featured);
@@ -40,13 +41,13 @@ export function SelectedWork() {
                 redesign of the Scalixity company website.
               </p>
             </Reveal>
-            <Reveal>
-              <div className="glass divide-y divide-white/10 overflow-hidden rounded-2xl">
-                {more.map((project) => (
-                  <ProjectRow key={project.slug} project={project} />
-                ))}
-              </div>
-            </Reveal>
+            <StaggerContainer className="glass divide-y divide-white/10 overflow-hidden rounded-2xl">
+              {more.map((project) => (
+                <StaggerItem key={project.slug}>
+                  <ProjectRow project={project} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         )}
 
@@ -55,9 +56,13 @@ export function SelectedWork() {
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-sm text-accent hover:underline"
+            className="group inline-flex items-center gap-1.5 font-mono text-sm text-accent transition hover:underline active:scale-95"
           >
-            More on GitHub <ArrowUpRight size={15} />
+            More on GitHub
+            <ArrowUpRight
+              size={15}
+              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
           </a>
         </div>
       </div>

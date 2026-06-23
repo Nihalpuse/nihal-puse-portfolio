@@ -3,9 +3,9 @@ import type { Project } from "@/lib/types";
 import { Badge } from "@/components/ui/Badge";
 import { Chip } from "@/components/ui/Chip";
 
-export function CompactProjectCard({ project }: { project: Project }) {
+export function CompactProjectCard({ project, className = "" }: { project: Project; className?: string }) {
   return (
-    <article className="glass flex h-full flex-col rounded-xl p-6">
+    <article className={`glass flex h-full flex-col rounded-xl p-6 ${className}`}>
       <div className="mb-3 flex items-center gap-2">
         {project.status === "live" ? (
           <Badge tone="accent">Live</Badge>

@@ -40,13 +40,17 @@ export function SelectedWork() {
                 redesign of the Scalixity company website.
               </p>
             </Reveal>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {more.map((project, i) => (
-                <Reveal key={project.slug} delay={i * 0.05}>
-                  <CompactProjectCard project={project} />
-                </Reveal>
-              ))}
-            </div>
+            <Reveal>
+              <div className="grid gap-5 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
+                {more.map((project, i) => (
+                  <CompactProjectCard
+                    key={project.slug}
+                    project={project}
+                    className={i % 3 === 0 ? "lg:col-span-2" : ""}
+                  />
+                ))}
+              </div>
+            </Reveal>
           </div>
         )}
 

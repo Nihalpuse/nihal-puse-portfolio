@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Make hover apply on actual :hover regardless of pointer type. Tailwind v4
+   otherwise gates hover behind @media (hover: hover), which disables every
+   hover effect when the primary pointer is touch — e.g. Windows touchscreen /
+   hybrid laptops — even with a mouse attached. */
+@custom-variant hover (&:hover);
+
 @theme {
   --color-bg: #0d1117;
   --color-surface: #161b22;

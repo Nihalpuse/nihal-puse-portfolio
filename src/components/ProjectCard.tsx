@@ -4,25 +4,22 @@ import type { Project } from "@/lib/types";
 import { Badge } from "@/components/ui/Badge";
 import { Chip } from "@/components/ui/Chip";
 
-export function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const reversed = index % 2 === 1;
+export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="glass overflow-hidden rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_26px_60px_-12px_rgba(45,212,191,0.28)] hover:ring-1 hover:ring-accent/45 md:grid md:grid-cols-2">
-      <div className={`relative aspect-[16/10] bg-white/[0.02] ${reversed ? "md:order-2" : ""}`}>
-        {project.image ? (
+    <article className="glass flex flex-col overflow-hidden rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_26px_60px_-12px_rgba(45,212,191,0.28)] hover:ring-1 hover:ring-accent/45 md:flex-row">
+      {project.image && (
+        <div className="relative aspect-[2/1] w-full shrink-0 bg-white/[0.02] md:aspect-auto md:w-[54%] md:self-stretch md:border-r md:border-white/10">
           <Image
             src={project.image}
             alt={`${project.title} preview`}
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 54vw"
+            className="object-contain"
           />
-        ) : (
-          <div className="grid h-full place-items-center font-mono text-sm text-subtle">{project.title}</div>
-        )}
-      </div>
+        </div>
+      )}
 
-      <div className="flex flex-col p-6 sm:p-8">
+      <div className="flex flex-1 flex-col justify-center p-6 sm:p-8">
         <div className="mb-3">
           {project.status === "live" ? (
             <Badge tone="accent">Featured · Live</Badge>

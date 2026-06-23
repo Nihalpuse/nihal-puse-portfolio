@@ -18,9 +18,9 @@ export function SelectedWork() {
         </Reveal>
 
         <div className="space-y-8">
-          {featured.map((project, i) => (
+          {featured.map((project) => (
             <Reveal key={project.slug}>
-              <ProjectCard project={project} index={i} />
+              <ProjectCard project={project} />
             </Reveal>
           ))}
         </div>

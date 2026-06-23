@@ -15,7 +15,7 @@ export function ProjectRow({ project }: { project: Project }) {
           {project.company && <span className="font-mono text-xs text-subtle">· {project.company}</span>}
           {project.status === "private" && <Lock size={12} className="text-subtle" aria-hidden />}
         </div>
-        <p className="mt-1 line-clamp-1 text-sm text-muted sm:max-w-2xl">{project.blurb}</p>
+        <p className="mt-1 text-sm leading-relaxed text-muted sm:max-w-2xl">{project.blurb}</p>
         <p className="mt-2 font-mono text-xs text-subtle lg:hidden">{project.tech.join(" · ")}</p>
       </div>
 

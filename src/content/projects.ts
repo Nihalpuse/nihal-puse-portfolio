@@ -14,7 +14,7 @@ export const projects: Project[] = [
       code: "https://github.com/Nihalpuse/flatmate-meal-planner",
     },
     status: "live",
-    // image: "/projects/aaj-kya-banega.png", // add a screenshot at this path, then uncomment
+    image: "/aaj-kya-banega.png",
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ export const projects: Project[] = [
       note: "Private — walkthrough on request",
     },
     status: "private",
-    // image: "/projects/procurement.png", // add a screenshot at this path, then uncomment
+    image: "/procurement.png",
     featured: true,
   },
   {

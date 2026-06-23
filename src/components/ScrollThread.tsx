@@ -75,15 +75,23 @@ export function ScrollThread() {
     let raf = 0;
     const update = () => {
       raf = 0;
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 1;
-      const drawn = len * progress;
-      setOffset(len - drawn);
       const p = pathRef.current;
-      if (p) {
-        const pt = p.getPointAtLength(drawn);
-        setDot({ x: pt.x, y: pt.y });
+      if (!p) return;
+      // Track the point on the curve currently at the vertical center of the
+      // viewport. The path's Y increases monotonically with length, so binary
+      // search the length whose point sits at that document Y.
+      const targetY = window.scrollY + window.innerHeight / 2;
+      let lo = 0;
+      let hi = len;
+      for (let i = 0; i < 18; i++) {
+        const mid = (lo + hi) / 2;
+        if (p.getPointAtLength(mid).y < targetY) lo = mid;
+        else hi = mid;
       }
+      const drawn = (lo + hi) / 2;
+      setOffset(len - drawn);
+      const pt = p.getPointAtLength(drawn);
+      setDot({ x: pt.x, y: pt.y });
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);

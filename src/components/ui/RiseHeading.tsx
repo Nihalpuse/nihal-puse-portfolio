@@ -4,11 +4,11 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 const container: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.03 } },
+  show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
 };
 const charV: Variants = {
-  hidden: { y: "0.45em", opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { y: "0.7em", opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
 // Heading whose characters rise up and fade in, staggered left to right, on

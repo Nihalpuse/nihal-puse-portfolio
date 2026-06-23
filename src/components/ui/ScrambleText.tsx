@@ -25,8 +25,10 @@ export function ScrambleText({ text, className }: { text: string; className?: st
     let frame = 0;
     let started = false;
 
+    const HOLD = 18; // frames of full scramble before characters start resolving
+    const SPEED = 5; // frames per revealed character (higher = slower)
     const run = () => {
-      const revealed = Math.floor(frame / 2);
+      const revealed = Math.max(0, Math.floor((frame - HOLD) / SPEED));
       setDisplay(
         text
           .split("")

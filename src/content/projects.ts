@@ -63,4 +63,15 @@ export const projects: Project[] = [
     featured: false,
     company: "Scalixity",
   },
+  {
+    slug: "scalixity-website",
+    title: "Scalixity Website",
+    blurb:
+      "Full revamp of the Scalixity company website from a dated design to a modern, responsive marketing site — rebuilt the layout, UI components, and visual language for a cleaner, faster experience.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    links: { live: "https://scalixity-website.vercel.app" },
+    status: "live",
+    featured: false,
+    company: "Scalixity",
+  },
 ];

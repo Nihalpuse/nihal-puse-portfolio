@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Lock, RotateCw } from "lucide-react";
+import { ArrowUpRight, Code2, Lock } from "lucide-react";
 import type { Project } from "@/lib/types";
 import { Badge } from "@/components/ui/Badge";
 import { Chip } from "@/components/ui/Chip";
@@ -16,11 +16,13 @@ export function FlipProjectCard({ project }: { project: Project }) {
       <div className="relative h-full w-full rounded-2xl transition-transform duration-500 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
         {/* Front: project name */}
         <div className={`${FACE} flex flex-col items-center justify-center text-center`}>
-          <RotateCw size={14} className="absolute right-4 top-4 text-subtle" aria-hidden />
           <h3 className="text-3xl font-extrabold tracking-tight sm:text-4xl">{project.title}</h3>
           {project.company && (
             <p className="mt-3 font-mono text-xs uppercase tracking-[0.16em] text-subtle">{project.company}</p>
           )}
+          <p className="absolute bottom-5 font-mono text-[10px] uppercase tracking-[0.18em] text-subtle/70">
+            hover for details
+          </p>
         </div>
 
         {/* Back: full detail */}

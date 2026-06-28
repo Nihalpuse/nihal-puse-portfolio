@@ -1,6 +1,6 @@
 # Nihal Puse — Portfolio
 
-Personal portfolio for **Nihal Puse**, a frontend developer based in Bhopal, India.
+Personal portfolio for **Nihal Puse**, a full-stack software engineer based in Bhopal, India.
 Single-page site in an "Engineered Dark" theme, built with the stack it showcases.
 
 🔗 **Live:** _add your Vercel URL here_
@@ -40,7 +40,7 @@ files, no JSX changes needed:
 - `projects.ts` — featured projects (uncomment `image:` after adding a screenshot to `public/projects/`)
 - `experience.ts` · `education.ts` · `skills.ts`
 
-The résumé download is served from `public/resume.pdf`.
+The résumé download is served from `public/Nihal_Puse_Resume.pdf`.
 
 ## Deploy
 

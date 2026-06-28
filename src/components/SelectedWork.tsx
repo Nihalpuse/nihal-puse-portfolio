@@ -32,7 +32,7 @@ export function SelectedWork() {
             </Reveal>
             <Reveal>
               <p className="mb-8 max-w-3xl text-sm leading-relaxed text-muted">
-                Contributed frontend development across multiple products at Scalixity —
+                Contributed full-stack development across multiple products at Scalixity —
                 Docfliq (medical-professional network with courses &amp; live webinars),
                 Nakshatra Gyaan (astrology platform with e-commerce &amp; AI chat), and
                 SmartTenantAI (role-based property-management app) — and led a full modern

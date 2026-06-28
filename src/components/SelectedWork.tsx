@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects, githubUrl } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectRow } from "@/components/ProjectRow";
+import { FlipProjectCard } from "@/components/FlipProjectCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { StaggerContainer, StaggerItem } from "@/components/ui/Stagger";
@@ -39,10 +39,10 @@ export function SelectedWork() {
                 redesign of the Scalixity company website.
               </p>
             </Reveal>
-            <StaggerContainer className="glass divide-y divide-white/10 overflow-hidden rounded-2xl">
+            <StaggerContainer className="grid gap-5 sm:grid-cols-2">
               {more.map((project) => (
                 <StaggerItem key={project.slug}>
-                  <ProjectRow project={project} />
+                  <FlipProjectCard project={project} />
                 </StaggerItem>
               ))}
             </StaggerContainer>

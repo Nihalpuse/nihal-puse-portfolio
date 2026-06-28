@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // from this component, so no static PNG is needed and it stays in sync.
 // NOTE: colors are literal hex (not the CSS tokens) because next/og renders via
 // Satori, which cannot read CSS variables. Keep these in sync with globals.css.
-export const alt = "Nihal Puse — Frontend Developer";
+export const alt = "Nihal Puse — Full-Stack Software Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,7 +37,7 @@ export default function OpengraphImage() {
         />
 
         <div style={{ display: "flex", color: "#2dd4bf", fontSize: 30, letterSpacing: 4 }}>
-          {"// FRONTEND DEVELOPER"}
+          {"// FULL-STACK ENGINEER"}
         </div>
 
         <div style={{ display: "flex", marginTop: 24, fontSize: 124, fontWeight: 800, letterSpacing: -2 }}>
@@ -46,7 +46,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", color: "#9aa4b2", fontSize: 38, marginTop: 28, maxWidth: 940 }}>
-          {"I build fast, accessible web interfaces with React, Next.js & TypeScript."}
+          {"Production web apps with React, Next.js, TypeScript and Python."}
         </div>
 
         <div style={{ display: "flex", alignItems: "center", marginTop: 52 }}>
@@ -61,7 +61,7 @@ export default function OpengraphImage() {
             }}
           />
           <div style={{ display: "flex", color: "#2dd4bf", fontSize: 28, letterSpacing: 2 }}>
-            Open to frontend opportunities
+            Open to full-stack roles
           </div>
         </div>
       </div>

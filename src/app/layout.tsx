@@ -9,22 +9,22 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nihal-puse.vercel.app"),
-  title: "Nihal Puse — Frontend Developer",
+  title: "Nihal Puse — Full-Stack Software Engineer",
   description:
-    "Frontend developer in Bhopal building fast, accessible web interfaces with React, Next.js & TypeScript.",
+    "Full-stack software engineer in Bhopal building production web apps with React, Next.js, TypeScript and Python.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    title: "Nihal Puse — Frontend Developer",
+    title: "Nihal Puse — Full-Stack Software Engineer",
     description:
-      "Frontend developer building fast, accessible web interfaces with React, Next.js & TypeScript.",
+      "Full-stack software engineer building production web apps with React, Next.js, TypeScript and Python.",
     url: "/",
     siteName: "Nihal Puse",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nihal Puse — Frontend Developer",
-    description: "Frontend developer building fast, accessible web interfaces.",
+    title: "Nihal Puse — Full-Stack Software Engineer",
+    description: "Full-stack software engineer building production web apps.",
   },
 };
 

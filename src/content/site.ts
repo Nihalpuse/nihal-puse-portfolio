@@ -2,18 +2,18 @@ import type { SiteContent } from "@/lib/types";
 
 export const site: SiteContent = {
   name: "Nihal Puse",
-  role: "Frontend Developer",
+  role: "Full-Stack Software Engineer",
   location: "Bhopal, India",
   email: "nihalpuse44@gmail.com",
-  eyebrow: "// frontend developer · react · next.js · typescript",
+  eyebrow: "// full-stack engineer · python · typescript · next.js",
   tagline:
-    "I build fast, accessible web interfaces — turning designs into polished, production products.",
+    "I build and ship production web apps end to end, from React and Next.js interfaces to Python and PostgreSQL back ends.",
   available: true,
-  availabilityText: "Open to frontend opportunities",
+  availabilityText: "Open to full-stack roles",
   resumeHref: "/resume.pdf",
   about: [
-    "Frontend developer based in Bhopal, currently building product UI at Scalixity. I turn designs into fast, accessible interfaces — mostly in the React, Next.js and TypeScript world.",
-    "I design the component API before the pixels, treat performance and accessibility as features rather than afterthoughts, and like to own a feature end to end — from the layout to the API behind it.",
+    "Full-stack software engineer based in Bhopal, currently building and shipping production features at Scalixity. I work across the stack: React and Next.js interfaces, REST API integration and application state, and PostgreSQL data layers.",
+    "I keep code clean and maintainable, treat performance and accessibility as features rather than afterthoughts, and like to own a feature end to end, from the layout to the API behind it.",
   ],
   principles: [
     "Design the component API before the pixels",

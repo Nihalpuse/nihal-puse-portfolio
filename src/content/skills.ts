@@ -1,7 +1,8 @@
 import type { SkillGroup } from "@/lib/types";
 
 export const skills: SkillGroup[] = [
-  { label: "Core", items: ["TypeScript", "JavaScript", "React", "Next.js"] },
-  { label: "Styling", items: ["Tailwind CSS", "CSS"] },
-  { label: "Tooling", items: ["Vite", "Vercel", "Netlify", "Git"] },
+  { label: "Languages", items: ["TypeScript", "JavaScript", "Python", "SQL"] },
+  { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Vite", "Tiptap"] },
+  { label: "Backend & Data", items: ["REST APIs", "Python microservices", "PostgreSQL (NeonDB)", "Drizzle ORM", "Auth.js"] },
+  { label: "Tooling", items: ["Git", "Vercel", "Netlify", "Agile / SDLC"] },
 ];

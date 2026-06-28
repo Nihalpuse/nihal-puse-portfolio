@@ -2,14 +2,15 @@ import type { ExperienceItem } from "@/lib/types";
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Technology & Product Development",
+    role: "Software / Product Developer",
     company: "Scalixity",
     location: "Remote",
     period: "Nov 2025 – Present",
     bullets: [
-      "Develop and maintain responsive UI components using modern frontend frameworks.",
-      "Optimize UI performance, accessibility, and cross-browser compatibility.",
-      "Collaborate with backend and design teams to deliver scalable user-facing features.",
+      "Build and maintain production features across multiple live products (healthcare, e-commerce, property management) in TypeScript and React, writing clean, reusable, maintainable code.",
+      "Integrate the UI with a Python microservices backend over REST APIs, handling application state, data flow, and error handling end to end.",
+      "Collaborate with backend and design teams in an agile workflow to deliver scalable, user-facing features.",
+      "Test, debug, and optimize components for performance, accessibility, and cross-browser compatibility before release.",
     ],
   },
   {

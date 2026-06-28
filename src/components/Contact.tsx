@@ -15,7 +15,7 @@ export function Contact() {
             Like what you see? <span className="text-accent">Let&apos;s talk.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted">
-            Open to frontend roles and collaborations. The fastest way to reach me is email.
+            Open to full-stack roles and collaborations. The fastest way to reach me is email.
           </p>
           <div className="mt-8 flex justify-center">
             <CopyEmail email={site.email} />

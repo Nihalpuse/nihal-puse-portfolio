@@ -34,8 +34,8 @@ export const projects: Project[] = [
     slug: "docfliq",
     title: "Docfliq",
     blurb:
-      "Responsive UI for a professional network and learning platform for verified healthcare professionals — combining a social content feed, course catalog, and live webinar events. Built reusable feed, course, and event-registration components from Figma and wired them to REST APIs for content, verification, and enrollment.",
-    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+      "Frontend for a professional network and learning platform for verified healthcare professionals: a social content feed, course catalog, live webinar events, and a Tiptap rich-text editor. Built reusable components from Figma and integrated a Python microservices backend over REST.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Tiptap"],
     links: { live: "https://www.docfliq.com" },
     status: "live",
     featured: false,

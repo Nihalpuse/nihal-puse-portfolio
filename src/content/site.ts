@@ -10,7 +10,7 @@ export const site: SiteContent = {
     "I build and ship production web apps end to end, from React and Next.js interfaces to Python and PostgreSQL back ends.",
   available: true,
   availabilityText: "Open to full-stack roles",
-  resumeHref: "/resume.pdf",
+  resumeHref: "/Nihal_Puse_Resume.pdf",
   about: [
     "Full-stack software engineer based in Bhopal, currently building and shipping production features at Scalixity. I work across the stack: React and Next.js interfaces, REST API integration and application state, and PostgreSQL data layers.",
     "I keep code clean and maintainable, treat performance and accessibility as features rather than afterthoughts, and like to own a feature end to end, from the layout to the API behind it.",

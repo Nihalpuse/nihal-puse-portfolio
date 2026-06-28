@@ -11,7 +11,7 @@ describe("content data", () => {
     expect(site.email).toBe("nihalpuse44@gmail.com");
     expect(site.socials.linkedin).toContain("linkedin.com/in/nihal-puse");
     expect(site.socials.github).toBe("https://github.com/Nihalpuse");
-    expect(site.resumeHref).toBe("/resume.pdf");
+    expect(site.resumeHref).toBe("/Nihal_Puse_Resume.pdf");
     expect(site.about.length).toBeGreaterThan(0);
     expect(site.principles.length).toBeGreaterThanOrEqual(4);
     expect(site.nav.map((n) => n.href)).toEqual(["#about", "#work", "#experience", "#contact"]);
